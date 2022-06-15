@@ -1,4 +1,6 @@
 #!/bin/bash -e
 
 echo "---> Installing application source..."
-mv /tmp/src/* ./
+
+# Pattern used to ensure dotfiles are copied. For example, the .s2i dir
+mv /tmp/src/{.[!.]*,*} ./
